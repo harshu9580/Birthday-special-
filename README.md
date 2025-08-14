@@ -271,4 +271,83 @@ function startHearts(){
 }
 
 let sakuraInt;
-function sta# Birthday-special-
+function startSakura(){
+  sakuraInt = setInterval(()=>{
+    const petal = document.createElement('div'); petal.className='sakura-petal';
+    petal.style.left = Math.random()*100 + 'vw';
+    petal.style.animationDuration = (Math.random()*4 + 6) + 's';
+    petal.style.animationDelay = Math.random() + 's';
+    document.getElementById('sakura').appendChild(petal);
+    setTimeout(() => petal.remove(), 10000);
+  }, 400);
+}
+
+let starInt;
+function startStars(){
+  starInt = setInterval(()=>{
+    const star = document.createElement('div'); star.className='star';
+    star.style.left = Math.random()*100 + 'vw';
+    star.style.top = Math.random()*50 + 'vh';
+    star.style.animationDelay = Math.random()*2 + 's';
+    document.getElementById('card').appendChild(star);
+    setTimeout(() => star.remove(), 3000);
+  }, 500);
+}
+
+let noteInt;
+function startLoveNotes(){
+  noteInt = setInterval(()=>{
+    const note = document.createElement('div'); note.className='love-note';
+    note.style.left = Math.random()*80 + 10 + 'vw';
+    note.style.animationDuration = (Math.random()*6 + 4) + 's';
+    note.style.animationDelay = Math.random() + 's';
+    document.getElementById('card').appendChild(note);
+    setTimeout(() => note.remove(), 10000);
+  }, 600);
+}
+
+let birdInt;
+function startBirds(){
+  birdInt = setInterval(()=>{
+    const bird = document.createElement('div'); bird.className='bird';
+    bird.style.left = '-10%';
+    bird.style.top = Math.random()*40 + 'vh';
+    bird.style.animationDelay = Math.random() + 's';
+    document.getElementById('card').appendChild(bird);
+    setTimeout(() => bird.remove(), 12000);
+  }, 1000);
+}
+
+let flowerInt;
+function startFlowers(){
+  flowerInt = setInterval(()=>{
+    const flower = document.createElement('div'); flower.className='flower';
+    flower.style.left = Math.random()*100 + '%';
+    flower.style.top = Math.random()*100 + '%';
+    flower.style.animationDelay = Math.random() + 's';
+    document.getElementById('card').appendChild(flower);
+    setTimeout(() => flower.remove(), 6000);
+  }, 800);
+}
+
+let riverInt;
+function startRiverFlow(){
+  riverInt = setInterval(()=>{
+    const river = document.createElement('div'); river.className='river-flow';
+    document.getElementById('card').appendChild(river);
+    setTimeout(() => river.remove(), 6000);
+  }, 6000);
+}
+
+let coupleInt;
+function startCoupleAnimation(){
+  const couple = document.querySelector('.anime-couple');
+  coupleInt = setInterval(() => {
+    couple.style.animation = 'sway-couple 5s infinite ease-in-out';
+  }, 100);
+}
+
+document.addEventListener('keydown', e=>{ if(e.code==='Space'){ e.preventDefault(); playBtn.click(); } });
+</script>
+</body>
+</html>
